@@ -1,5 +1,12 @@
 <mujoco model="g1_29dof">
   <compiler angle="radian" meshdir="meshes"/>
+  <default>
+    <joint damping="200" armature="0.01"/>
+</default>
+
+<default>
+    <motor forcerange="-300 300"/>
+</default>
 
   <asset>
     <mesh name="pelvis" file="pelvis.STL"/>
@@ -292,6 +299,7 @@
   </asset>
   <worldbody>
     <light pos="1 0 3.5" dir="0 0 -1" directional="true"/>
-    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
+    <geom name="floor" size="0 0 0.05" type="plane" friction="2 0.1 0.1" material="groundplane"/>
   </worldbody>
+  
 </mujoco>
