@@ -1,0 +1,3 @@
+python sim2sim.py --robot g1 --motion walk_stand.pkl
+
+humanoid general motion tracking repo
